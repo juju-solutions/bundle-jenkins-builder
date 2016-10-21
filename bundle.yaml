@@ -1,0 +1,22 @@
+series: trusty
+description: |
+  A bundle to build projects automatically.
+applications:
+  jenkins:
+    charm: cs:trusty/jenkins
+    options:
+      password: chuckisawesome!
+    num_units: 1
+    constraints: "mem=12G cpu-cores=4 root-disk=50G"
+    expose: true
+    annotations:
+      gui-x: '300'
+      gui-y: '0'
+  jenkins-workspace: 
+    charm: /home/mbruzek/workspace/charms/trusty/jenkins-workspace
+    annotations:
+      gui-x: '600'
+      gui-y: '0'
+relations:
+  - - jenkins:juju-info
+    - jenkins-workspace:jenkins-host 
