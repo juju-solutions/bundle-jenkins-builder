@@ -15,11 +15,17 @@ section for more information.
 
 ## Usage
 
-To deploy type the following command:
+To deploy this bundle:
 
 ```
 juju deploy ./bundle.yaml
+juju config jenkins password=YourSuperSecretPassword.
 ```
+
+You should now be able to go to the public address of the jenkins charm and 
+log in as admin with the password you entered.
+
+Create jobs and build away!
 
 ## Constraints
 
