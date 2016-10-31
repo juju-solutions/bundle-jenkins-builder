@@ -69,7 +69,7 @@ applications:
         workflow-support
         ws-cleanup
     num_units: 1
-    constraints: "mem=12G cpu-cores=4 root-disk=50G"
+    constraints: "mem=12G cpu-cores=4 root-disk=100G"
     expose: true
     annotations:
       gui-x: '300'
