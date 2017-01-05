@@ -5,7 +5,7 @@ applications:
   jenkins:
     charm: cs:trusty/jenkins
     options:
-       password: ""
+       password: "notdefaultpassword"
        plugins: |
         ace-editor
         analysis-core
@@ -69,7 +69,7 @@ applications:
         workflow-support
         ws-cleanup
     num_units: 1
-    constraints: "mem=12G cpu-cores=4 root-disk=100G"
+    constraints: "mem=14500M cpu-cores=4 root-disk=100G"
     expose: true
     annotations:
       gui-x: '300'
